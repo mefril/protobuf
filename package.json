@@ -1,0 +1,18 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build_py": ".\\protoc\\bin\\protoc.exe  -I=proto_src --python_out=proto_py proto_src/messages.proto",
+    "build_js": ".\\protoc\\bin\\protoc.exe --proto_path=proto_src --js_out=import_style=commonjs,binary:. messages.proto",
+    "start": "node client.js",
+    "start_py": "python server.py"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "google-protobuf": "^3.6.1"
+  }
+}
